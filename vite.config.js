@@ -1,12 +1,10 @@
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
-// Base
-import { BASE } from './src/config';
 
 // https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [react()],
-	base: BASE,
+	base: '/',
 	build: {
 		rollupOptions: {
 			output: {
