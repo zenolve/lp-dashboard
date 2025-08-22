@@ -270,10 +270,10 @@ export function EditService() {
 						<Button onClick={confirmUpdate}>Update Service</Button>
 						{service.status === 'pending' && (
 							<>
-								<Button onClick={confirmApprove}>Approve Service</Button>
-								<Button onClick={confirmDeny} style='critical'>
-									Deny Service
-								</Button>
+								<Button onClick={() => confirmApprove(serviceId)}>Approve Service</Button>
+                                <Button onClick={() => confirmDeny(serviceId)} style='critical'>
+                                               Deny Service
+                                       </Button>
 							</>
 						)}
 						{service.status === 'approved' && (
